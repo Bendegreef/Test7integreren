@@ -29,13 +29,16 @@ function onDeviceReady() {
 }
 
 function takePicture(e) {
-	alert("clicktakepicture");
+	if(!navigator.camera) {
+	alert("no camera!");
+	} else {
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
 		allowEdit: true,
 		correctOrientation: true
 	});
+	}
 }
 
 function onSuccess(imageData) {
