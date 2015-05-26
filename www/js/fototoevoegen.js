@@ -4,7 +4,7 @@ devel: true,
 jquery: true
 */
 /*
-global CanvasCamera
+global CanvasCamera, device
 */
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value 
@@ -13,8 +13,11 @@ var destinationType; // sets the format of returned value
 //
 
 $(document).ready(function(){
-	alert('document ready');
+   if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) && typeof device !== "undefined") {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    } else {
         onDeviceReady();
+    }
 });
 
 // Cordova is ready to be used!
@@ -22,17 +25,18 @@ $(document).ready(function(){
 function onDeviceReady() {
 	console.log(window.device);
 	console.log(window.plugins);
-	alert('device ready foto.js');
+	alert('deviceready');
 	/*var objCanvas = document.getElementById("canvas");
 	window.plugin.CanvasCamera.initialize(objCanvas);
 	alert('canvas ready');*/
 	document.getElementById("add_photo").addEventListener("click", takePicture ,false);
+	alert('jo');
 	//document.getElementById("takePicturePreview").addEventListener("click", onTakePicture, false);
 
 }
 
 function takePicture(e) {
-	console.log("jo");
+	alert("jo");
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
