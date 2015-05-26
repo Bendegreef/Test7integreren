@@ -395,7 +395,7 @@ textarea {
     resize: none;
 }
 
-.add_photo {
+#add_photo {
     font-family: 'icons';
     font-size: 1.9em;
     display: inline-block;

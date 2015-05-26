@@ -5,31 +5,22 @@ devel: true,
 /*
 global CanvasCamera
 */
-var pictureSource;
-var destinationType;
-
-// Wait for Cordova to connect with the device
-//
-
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-// Cordova is ready to be used!
-//
 function onDeviceReady() {
-	console.log(window.device);
-	console.log(window.plugins);
-	alert('device ready');
-	document.getElementsByTagName("add_photo").addEventListener("click", takePicture, false);
+	alert("deviceready");
+	document.getElementById("add_photo").addEventListener("click", takePicture, false);
 }
 
 function takePicture(e) {
-	navigator.camera.getPicture(onSuccess, onFail, {
+	alert("testgelukt");
+	/*navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
 		allowEdit: true,
 		correctOrientation: true
-	});
+	});*/
 
 }
 
