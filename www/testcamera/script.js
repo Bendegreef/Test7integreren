@@ -14,6 +14,7 @@ var destinationType; // sets the format of returned value
 
 
 document.addEventListener("deviceready", onDeviceReady, false);
+onDeviceReady();
 // Cordova is ready to be used!
 //
 function onDeviceReady() {
