@@ -12,27 +12,20 @@ var destinationType; // sets the format of returned value
 // Wait for Cordova to connect with the device
 //
 
-$(document).ready(function(){
-   if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) && typeof device !== "undefined") {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    } else {
-        onDeviceReady();
-    }
+$(document).ready(function () {
+	if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) && typeof device !== "undefined") {
+		document.addEventListener("deviceready", onDeviceReady, false);
+	} else {
+		onDeviceReady();
+	}
 });
 
 // Cordova is ready to be used!
 //
 function onDeviceReady() {
-	console.log(window.device);
-	console.log(window.plugins);
 	alert('deviceready');
-	/*var objCanvas = document.getElementById("canvas");
-	window.plugin.CanvasCamera.initialize(objCanvas);
-	alert('canvas ready');*/
-	document.getElementById("add_photo").addEventListener("click", takePicture ,false);
+	document.getElementById("add_photo").addEventListener("click", takePicture, false);
 	alert('jo');
-	//document.getElementById("takePicturePreview").addEventListener("click", onTakePicture, false);
-
 }
 
 function takePicture(e) {
@@ -43,7 +36,6 @@ function takePicture(e) {
 		allowEdit: true,
 		correctOrientation: true
 	});
-
 }
 
 function onSuccess(imageData) {
@@ -61,12 +53,9 @@ function onSuccess(imageData) {
 	var dataURL = canvas.toDataURL();
 	document.getElementById("defImg").setAttribute('crossOrigin', 'anonymous');
 	document.getElementById("defImg").src = dataURL;
-	//imageObj.src = "data:image/jpeg;base64," + imageData;
 }
 
 function onFail(message) {
-	setTimeout(function () {
-		//alert('Failed because: ' + message);
-	}, 0);
+	setTimeout(function () {}, 0);
 
 }
