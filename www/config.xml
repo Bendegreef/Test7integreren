@@ -18,8 +18,8 @@
     
     <!-- Platforms -->
     <!-- If you specify none, all platforms will be built. -->
-    <!--<gap:platform name="ios" />
-    <gap:platform name="android" />-->
+    <!--<gap:platform name="ios" />-->
+    <gap:platform name="android" />
     <!-- Preferences -->
 
     <preference name="permissions"                value="none"/>
