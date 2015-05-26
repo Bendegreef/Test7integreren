@@ -4,7 +4,7 @@ devel: true,
 jquery: true
 */
 /*
-global CanvasCamera, device
+global device
 */
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value 
