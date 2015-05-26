@@ -36,7 +36,7 @@ function onDeviceReady() {
 }
 
 function takePicture(e) {
-	alert("jo");
+	alert("joclick");
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
