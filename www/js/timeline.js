@@ -50,8 +50,8 @@ $(document).ready(function () {
                     var htmlString="";
                     htmlString += "<article>";
                     htmlString += "<p class='messagetime'>" + timeConverter(responseData.messages[i].timestamp) + "</p>";
-                    htmlString += "<p class='ongepast_icon'>a</p>"
                     htmlString += "<p class='messagename'>" + responseData.messages[i].from + "</p>";
+                    htmlString += "<p class='ongepast_icon'>a</p>";
                     htmlString += "<p class='message'>" + responseData.messages[i].message + "</p>";
                     if(responseData.messages[i].photoURL !== "")
                         htmlString += "<img src='" + responseData.messages[i].photoURL +"' alt='afbeelding' style='float: left'>";
@@ -62,6 +62,8 @@ $(document).ready(function () {
                 }
 
                     likes();
+                    ongepast();
+                    
                 },
                 error: function(responseData){  
                   alert("server niet beschikbaar");
@@ -124,5 +126,26 @@ var likes = function(){
     });
 };
 
+//------------------------- ongepast (wordt opgeroepen in de ajax call van: Ophalen tekstberichten------------*/
 
+var ongepast = function(){ 
+    $('.ongepast_icon').click(function () {
+        
+        $('.gekleurdebalk').animate({
+            height: '65px'
+        }, 500, 'easeInOutCubic', function () {
+            $('.gekleurdebalk ul').show("slide", {direction: 'down'}, 300, function() {$('.darken').animate({opacity: '1'})});
+        });
+    });
+    
+    $('.gekleurdebalk ul').click(function () {
+        $('.gekleurdebalk').animate({
+            height: '0.45em'
+        }, 500, 'easeInOutCubic', function () {
+            $('.gekleurdebalk ul').hide("slide", {direction: 'down'}, 300);
+        });
+        
+        $('.darken').animate({opacity: '0'}, 1000)
+    });
 
+};

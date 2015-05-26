@@ -34,59 +34,36 @@ $(document).ready(function () {
 
 /* --------------verzenden-------------------------- */
 
-var eventposted=0;
-
 $(document).ready(function () {
       document.getElementById("send_message").addEventListener("click", verzenden, false);
 
     function verzenden(){
-      
-        var bericht = $('.bericht').val();  
-        var loginCode = localStorage.getItem('loginCode');
-        var naam = $('.naam').text(); 
-        $('#code').text(loginCode);
-        $('#message').val(bericht);
-        $('#name').val(naam);
 
-         $('#verzend_knop').trigger('click');
-          window.setInterval(veranderURL, 200); //http://answers.squarespace.com/questions/51868/after-a-successful-form-submission-how-do-i-redirect-to-another-page
+        var message = $('.bericht').val();  
+        var code = localStorage.getItem('loginCode');
+        var from = $('.naam').text(); 
 
         
- /*      var data = {'code':loginCode,'name':naam, 'message': bericht};
+        var data = {code:code,from:from, message: message};
+        var json1 = JSON.stringify(data);
  $.ajax({
-   url: "http://ehb.adaytoshare.be/adts/guestbook/add_post" ,
+   url: "http://api.adaytoshare.be/1/guestbook/post?code="+ code +"&from="+ from +"&message="+ message ,    // opsturen van data in het data veld lukt nog niet. Daarom moet het voorlopig via de url.
    type: 'POST',
-   //contentType:'application/json',
-   data: JSON.stringify(data),
+   data:  json1,
+    // contentType: "application/json",
    dataType:'json',
-   success: function(data){
+   success: function(responseData){
      //On ajax success do this
-     alert("ok");
+       //for (var key in responseData) {
+                  //alert(key + ": " +responseData[key]);
+                // }
+       window.location = "timeline.html";
       },
    error: function(xhr, ajaxOptions, thrownError) {
-      alert("fout");
-        $.mobile.loading('hide')
+      alert("fout bij het versturen");
     }
- });*/
+ });
     }
 });
 
 
-function veranderURL(){
-  if(eventposted==0){
-    window.location = "timeline.html";
-    eventposted=1;
-  }
-}
-/*
-        
-        <form action="http://ehb.adaytoshare.be/adts/guestbook/add_post" method="post" class="guestbook_form">
-            <h2>Zonder foto</h2>
-            <label>Code:</label> <input type="text" name="code" /><br />
-            <textarea name="message" placeholder="Uw bericht"></textarea><br />
-            <input type="text" name="name" id="name" placeholder="Wie ben je of wie zijn jullie?" value="" />
-            <div id="button">
-                <input type="submit" name="btnSubmit" value="Plaats bericht" />
-            </div>
-        </form>
-        */
