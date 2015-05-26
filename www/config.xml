@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "be.erasmushogeschool.hello-camera"
         version   = "1.0.0">
 
-    <name>A Day to Share</name>
+    <name>Test7</name>
 
     <description>
-        A day to share maakt het mogelijk om een uniek gastenboek te maken en ditnzo eenvoudig mogelijk!
+        Test7
     </description>
 
-    <author href="http://erasmushogeschool.be" email="kenny.van.meines@student.ehb.be">
-        Kenny van Meines, Joren De Mesmaeker, Ben De Greef, Nienke Vanderwegen, Sammy Sadati
+    <author href="http://erasmushogeschool.be" email="Ben.de.greef@student.ehb.Be">
+        TeamC
     </author>
     
     <!-- Platforms -->
     <!-- If you specify none, all platforms will be built. -->
-    <!--<gap:platform name="ios" />
-    <gap:platform name="android" />-->
+    <gap:platform name="android" />
+
     <!-- Preferences -->
 
     <preference name="permissions"                value="none"/>
@@ -64,24 +63,26 @@
     -->
 
     <!-- Third party plugins -->
+	
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<gap:plugin name="com.modaltech.cordova.plugin.canvascamera" version="1.0" />
 
     <!-- Icons. This is a relative path to config.xml. -->
-    <icon src="icon.svg" />
-    <icon src="img/adtslogo_36.png"   gap:platform="android"    gap:qualifier="ldpi" />
-    <icon src="img/adtslogo_48.png"   gap:platform="android"    gap:qualifier="mdpi" />
-    <icon src="img/adtslogo_72.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="img/adtslogo_96.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-    <icon src="img/adtslogo_96.png"     gap:platform="blackberry" />
-    <icon src="img/adtslogo_96.png"    gap:platform="blackberry" gap:state="hover"/>
-    <icon src="img/adtslogo_72.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="img/adtslogo_72.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="img/adtslogo_300.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="img/adtslogo_300.png"        gap:platform="ios"        width="144" height="144" />
-    <icon src="img/adtslogo_72.png"       gap:platform="webos" />
-    <icon src="img/adtslogo_48.png"  gap:platform="winphone" />
-    <icon src="img/adtslogo_300.png" gap:platform="winphone"   gap:role="background" />
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" />
+    <icon src="res/icon/blackberry/icon-80.png"     gap:platform="blackberry" gap:state="hover"/>
+    <icon src="res/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="res/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="res/icon/ios/icon-57-2x.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="res/icon/ios/icon-72-2x.png"         gap:platform="ios"        width="144" height="144" />
+    <icon src="res/icon/webos/icon-64.png"          gap:platform="webos" />
+    <icon src="res/icon/windows-phone/icon-48.png"  gap:platform="winphone" />
+    <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 
     <!-- Splash screens. -->
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"       gap:platform="android" gap:qualifier="port-ldpi" />
