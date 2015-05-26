@@ -1,26 +1,25 @@
 /* jshint
 browser: true,
 devel: true,
+jquery: true
 */
 /*
 global CanvasCamera
 */
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
+$(document).ready(function () {
 	alert("deviceready");
+	console.log("jo");
 	document.getElementById("add_photo").addEventListener("click", takePicture, false);
-}
+});
 
 function takePicture(e) {
 	alert("testgelukt");
-	/*navigator.camera.getPicture(onSuccess, onFail, {
+	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
 		allowEdit: true,
 		correctOrientation: true
-	});*/
+	});
 
 }
 
