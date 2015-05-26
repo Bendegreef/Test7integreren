@@ -12,11 +12,8 @@ var destinationType; // sets the format of returned value
 // Wait for Cordova to connect with the device
 //
 
-    if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)) {
+
         document.addEventListener("deviceready", onDeviceReady, false);
-    } else {
-        onDeviceReady();
-    }
 
 // Cordova is ready to be used!
 //
@@ -35,6 +32,7 @@ function onDeviceReady() {
 }
 
 function takePicture(e) {
+	console.log('er');
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
