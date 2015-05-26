@@ -739,3 +739,12 @@ input:-moz-placeholder {
 .slidemenu {
     width: 100%;
 }
+
+#canvas, #myImage {
+	display: none;
+}
+#defImg {
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+}
