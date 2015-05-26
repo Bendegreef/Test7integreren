@@ -9,7 +9,7 @@
     <name>A Day to Share</name>
 
     <description>
-        A day to share maakt het mogelijk om een uniek gastenboek te maken en ditnzo eenvoudig mogelijk!
+        A day to share maakt het mogelijk om een uniek gastenboek te maken en dit zo eenvoudig mogelijk!
     </description>
 
     <author href="http://erasmushogeschool.be" email="kenny.van.meines@student.ehb.be">
@@ -66,6 +66,7 @@
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
+	<gap:plugin name="com.modaltech.cordova.plugin.canvascamera" version="1.0" />
 
     <!-- Icons. This is a relative path to config.xml. -->
     <icon src="icon.svg" />
