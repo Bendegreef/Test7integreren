@@ -4,7 +4,7 @@ devel: true,
 jquery: true
 */
 /*
-global CanvasCamera, device
+global CanvasCamera
 */
 var pictureSource; // picture source
 var destinationType; // sets the format of returned value 
@@ -12,31 +12,24 @@ var destinationType; // sets the format of returned value
 // Wait for Cordova to connect with the device
 //
 
-$(document).ready(function(){
-   if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/) && typeof device !== "undefined") {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    } else {
-        onDeviceReady();
-    }
-});
 
+document.addEventListener("deviceready", onDeviceReady, false);
 // Cordova is ready to be used!
 //
 function onDeviceReady() {
 	console.log(window.device);
 	console.log(window.plugins);
-	alert('deviceready');
+	alert('device ready script.js');
 	/*var objCanvas = document.getElementById("canvas");
 	window.plugin.CanvasCamera.initialize(objCanvas);
 	alert('canvas ready');*/
-	document.getElementById("add_photo").addEventListener("click", takePicture ,false);
-	alert('jo');
+	document.getElementById("takePicture").addEventListener("click", takePicture, false);
 	//document.getElementById("takePicturePreview").addEventListener("click", onTakePicture, false);
 
 }
 
 function takePicture(e) {
-	alert("clicktakepicture");
+	console.log("go");
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
