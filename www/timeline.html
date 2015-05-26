@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Day To Share</title>
+    <link rel="stylesheet" href="adts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/ongepast.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/swipe.js"></script>
+    <script src="js/like.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class='naam_event'>naam event</h1>
+        <div class="gekleurdebalk">
+                        <div class="darken"></div>
+            <p>Zeker dat deze content ongepast is?</p>
+            <ul>
+                <li>Ja</li>
+                <li>Nee</li>
+            </ul>
+        </div>
+    </header>
+    <div class="menu_icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    <section class="insidebox">
+        <section class="berichten">
+            <section class="welcome">
+
+                <p class="welcometext">Welkom op dit gastenboek.
+                    <br>Laat een bericht achter en draag bij tot een uniek gastenboek!</p>
+
+            </section>
+
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="ongepast_icon">a</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            
+            <!--
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+            <article>
+                <p class="messagetime">18:52</p>
+                <p class="messagename">Marie-Jeanne</p>
+                <p class="message">May your days be filled with love, your fun never ending and all your ups &amp; downs be between the sheets!</p>
+                <img src="img/ADTSiconsheartnotliked.svg" alt="hartje voor likes" class="like-heart">
+                <p class="like-count">11</p>
+            </article>
+-->
+        </section>
+    </section>
+
+    <nav class="tabs">
+        <li id="berichttab" class="berichttab">
+            <div class="activebar berichtactive"></div><span class="tabicon berichticon">o</span>
+        </li>
+        <li id="tijdlijntab" class="tijdlijntab">
+            <div class="activebar tijdlijnactive"></div><span class="tabicon tijdlijnicon">p</span>
+        </li>
+    </nav>
+
+    <div class="slidemenu">
+
+        <img class="logo" alt="logo" src="img/adtslogo.svg">
+
+        <p class="naamlogout">(naam)</p>
+        <p class="eventnaamlogout">(event)</p>
+        <p class="eventcodelogout">(eventcode)</p>
+
+        <button id="onlineplatform" class="onlineplatform">Naar het online platform</button>
+        <button id="logoutbutton" class="logoutbutton">Logout</button>
+
+        <footer class="logoutfooter">Departement Design &amp; Technologie van de Erasmushogeschool Brussel</footer>
+    </div>
+
+</body>
+
+</html>
