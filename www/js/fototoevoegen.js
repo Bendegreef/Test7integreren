@@ -12,8 +12,10 @@ var destinationType; // sets the format of returned value
 // Wait for Cordova to connect with the device
 //
 
-
-        document.addEventListener("deviceready", onDeviceReady, false);
+$(document).ready(function(){
+	alert('document ready');
+        onDeviceReady();
+});
 
 // Cordova is ready to be used!
 //
@@ -24,15 +26,13 @@ function onDeviceReady() {
 	/*var objCanvas = document.getElementById("canvas");
 	window.plugin.CanvasCamera.initialize(objCanvas);
 	alert('canvas ready');*/
-	$(document).ready(function(){
 	document.getElementById("add_photo").addEventListener("click", takePicture ,false);
-	});
 	//document.getElementById("takePicturePreview").addEventListener("click", onTakePicture, false);
 
 }
 
 function takePicture(e) {
-	console.log('er');
+	console.log("jo");
 	navigator.camera.getPicture(onSuccess, onFail, {
 		quality: 50,
 		destinationType: navigator.camera.DestinationType.DATA_URL,
